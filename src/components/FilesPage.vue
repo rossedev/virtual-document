@@ -31,6 +31,12 @@
           :dataFile="dataFileToEdit"
           @close="closeFileForm"
         />
+        <ShowFileForm
+          v-if="showStaticDialog"
+          :isOpen="showStaticDialog"
+          :dataFile="dataFileToShow"
+          @close="closeStaticFileForm"
+        />
 
         <q-menu>
           <q-list style="min-width: 100px">
@@ -39,6 +45,9 @@
             </q-item>
             <q-item clickable @click="openFileForm(file)" v-close-popup dense>
               <q-item-section>Edit</q-item-section>
+            </q-item>
+            <q-item clickable @click="openStaticFileForm(file)" v-close-popup dense>
+              <q-item-section>Details</q-item-section>
             </q-item>
             <q-item clickable @click="deleteFileWithId(file)" v-close-popup dense>
               <q-item-section>Delete</q-item-section>
@@ -130,6 +139,7 @@ import { useAuthStore } from '@/stores/auth'
 import { Notify } from 'quasar'
 import { useFilesStore } from '@/stores/files'
 import EditFileForm from './EditFileForm.vue'
+import ShowFileForm from './ShowFileForm.vue'
 import type { FileData } from '@/types/files'
 import { isImage } from '@/utils/images'
 
@@ -137,15 +147,20 @@ export default defineComponent({
   name: 'FilesPage',
   data() {
     const showEditDialog = ref(false)
+    const showStaticDialog = ref(false)
     const dataFileToEdit = ref<FileData | null>(null)
+    const dataFileToShow = ref<FileData | null>(null)
 
     return {
+      showStaticDialog,
       showEditDialog,
-      dataFileToEdit
+      dataFileToEdit,
+      dataFileToShow
     }
   },
   components: {
-    EditFileForm
+    EditFileForm,
+    ShowFileForm
   },
   setup() {
     let filesList = ref<any[]>([])
@@ -200,6 +215,14 @@ export default defineComponent({
     closeFileForm() {
       this.showEditDialog = false
       this.dataFileToEdit = null
+    },
+    openStaticFileForm(file: FileData) {
+      this.showStaticDialog = true
+      this.dataFileToShow = JSON.parse(JSON.stringify(file))
+    },
+    closeStaticFileForm() {
+      this.showStaticDialog = false
+      this.dataFileToShow = null
     }
   }
 })

@@ -1,7 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getStorage } from 'firebase/storage'
-console.log('import.meta.env.VITE_FIREBASE_KEY', import.meta.env.VITE_FIREBASE_KEY)
-console.log('import.meta.env', import.meta.env)
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_KEY,
   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
