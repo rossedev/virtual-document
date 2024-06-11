@@ -25,7 +25,7 @@
           >Profile</RouterLink
         >
         <RouterLink v-if="authStore.isAuthenticated" to="/" @click.prevent="logout"
-          >Sign out</RouterLink
+          >Log out</RouterLink
         >
       </q-toolbar>
     </q-header>

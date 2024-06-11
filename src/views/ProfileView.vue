@@ -7,7 +7,7 @@
       <p><strong>Lastname:</strong> {{ userProfile.lastname }}</p>
       <p><strong>Email:</strong> {{ userProfile.email }}</p>
     </div>
-    <q-btn color="primary" @click.prevent="logout">Sign out</q-btn>
+    <q-btn color="primary" @click.prevent="logout">Log out</q-btn>
   </div>
 </template>
 
