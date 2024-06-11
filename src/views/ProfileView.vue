@@ -7,7 +7,7 @@
       <p><strong>Lastname:</strong> {{ userProfile.lastname }}</p>
       <p><strong>Email:</strong> {{ userProfile.email }}</p>
     </div>
-    <q-btn color="primary" to="/" @click.prevent="logout">Sign out</q-btn>
+    <q-btn color="primary" @click.prevent="logout">Sign out</q-btn>
   </div>
 </template>
 
@@ -27,11 +27,6 @@ h5 {
 strong {
   font-weight: bold;
 }
-
-button {
-  position: absolute;
-  bottom: 0;
-}
 </style>
 
 <script lang="ts">
@@ -39,13 +34,16 @@ import { defineComponent } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { Notify } from 'quasar'
 import { useFilesStore } from '@/stores/files'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   data() {
+    const router = useRouter()
     const authStore = useAuthStore()
     const filesStore = useFilesStore()
 
     return {
+      router,
       authStore,
       filesStore,
       userProfile: {
@@ -59,6 +57,7 @@ export default defineComponent({
     logout() {
       this.filesStore.cleanFiles()
       this.authStore.clearUser()
+      this.router.push('/')
       Notify.create({ color: 'positive', message: 'Logged out successfully' })
     }
   }

@@ -6,7 +6,7 @@
       </q-card-section>
       <q-card-section style="max-height: 60vh" class="scroll">
         <div class="row q-gutter-x-md">
-          <div class="col-sm col-lg-12">
+          <div class="col-sm-12 col-lg">
             <q-input
               v-model="form.idDocument"
               label="Identification Document"
@@ -16,7 +16,7 @@
               outlined
             ></q-input>
           </div>
-          <div class="col-sm col-lg-12">
+          <div class="col-sm-12 col-lg">
             <q-input
               v-model="form.fileName"
               label="File Name"
@@ -29,7 +29,7 @@
         </div>
 
         <div class="row q-gutter-x-md">
-          <div class="col-sm col-lg-12">
+          <div class="col-sm-12 col-lg">
             <q-input
               v-model="form.firstName"
               label="First Name"
@@ -39,7 +39,7 @@
               outlined
             ></q-input>
           </div>
-          <div class="col-sm col-lg-12">
+          <div class="col-sm-12 col-lg">
             <q-input
               v-model="form.lastName"
               label="Last Name"

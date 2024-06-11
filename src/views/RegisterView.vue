@@ -7,11 +7,11 @@
       <q-card-section>
         <q-form @submit.prevent="registerUser">
           <div class="row q-gutter-x-md">
-            <div class="col-sm col-lg-12">
+            <div class="col-sm-12 col-lg">
               <q-input v-model="name" required label="Name" type="text" class="q-mb-md" dense />
             </div>
 
-            <div class="col-sm col-lg-12">
+            <div class="col-sm-12 col-lg">
               <q-input
                 v-model="lastname"
                 required

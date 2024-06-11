@@ -30,6 +30,13 @@
       "lastname": "Rpsa",
       "email": "05rosa04+3@gmail.com",
       "password": "05rosa04+3@gmail.com"
+    },
+    {
+      "id": "e5ed",
+      "name": "Rosa",
+      "lastname": "Rosa",
+      "email": "05rosa04+10@gmail.com",
+      "password": "05rosa04+10@gmail.com"
     }
   ],
   "files": [
@@ -87,6 +94,19 @@
       "typeFile": "image/jpeg",
       "userId": "649e",
       "pin": false
+    },
+    {
+      "id": "cea5",
+      "idDocument": "1",
+      "firstName": "file 1",
+      "lastName": "file 1",
+      "fileName": "file 1",
+      "amountOfPages": 1,
+      "elementNumber": "d6ts0mpetw",
+      "file": "https://firebasestorage.googleapis.com/v0/b/files-b96f0.appspot.com/o/files%2Fmaq.png?alt=media&token=9e73d818-6845-45db-99e0-d1b67dbd6266",
+      "typeFile": "image/png",
+      "userId": "e5ed",
+      "pin": true
     }
   ]
 }
