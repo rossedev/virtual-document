@@ -74,6 +74,19 @@
       "typeFile": "image/png",
       "userId": "47c6",
       "pin": false
+    },
+    {
+      "id": "b51e",
+      "idDocument": "1",
+      "firstName": "1",
+      "lastName": "1",
+      "fileName": "1",
+      "amountOfPages": 1,
+      "elementNumber": "1h1xt1iuqe",
+      "file": "https://firebasestorage.googleapis.com/v0/b/files-b96f0.appspot.com/o/files%2Fdownload.jpg?alt=media&token=35c32ef1-06eb-4bf0-8be0-c231111a8098",
+      "typeFile": "image/jpeg",
+      "userId": "649e",
+      "pin": false
     }
   ]
 }

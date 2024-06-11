@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app'
 import { getStorage } from 'firebase/storage'
-
+console.log('import.meta.env.VITE_FIREBASE_KEY', import.meta.env.VITE_FIREBASE_KEY)
+console.log('import.meta.env', import.meta.env)
 const firebaseConfig = {
-  apiKey: 'AIzaSyBp777wkqSTxRK5OYXLnqQBGiQeZArhm5A',
-  authDomain: 'files-b96f0.firebaseapp.com',
-  projectId: 'files-b96f0',
-  storageBucket: 'files-b96f0.appspot.com',
-  messagingSenderId: '988145332628',
-  appId: '1:988145332628:web:04538ae28a7336678f1f81'
+  apiKey: import.meta.env.VITE_FIREBASE_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 }
 
 export const app = initializeApp(firebaseConfig)
