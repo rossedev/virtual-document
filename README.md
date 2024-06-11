@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# virtual-document
-=======
 # virtual-document
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -40,4 +37,3 @@ npm run build
 ```sh
 npm run lint
 ```
->>>>>>> 61b0e3f (Initial project)
